@@ -1,1 +1,0 @@
-﻿.\octopus_startup.sh
