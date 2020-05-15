@@ -1,0 +1,10 @@
+version: '2'
+services:
+  web:
+    image: smehta1712/sample-python-webapp
+    ports:
+     - "5000:5000"
+    environment:
+      - text="Hello World"
+  redis:
+    image: redis:latest
