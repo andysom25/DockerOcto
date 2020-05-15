@@ -1,10 +1,22 @@
 version: '2'
 services:
   web:
-    image: smehta1712/sample-python-webapp
+    image: ${WEB_IMAGE}:${WEB_TAG}
     ports:
-     - "5000:5000"
+     - "${WEB_PORT}:5000"
     environment:
-      - text="Hello World"
+      - text=${TEXT_MESSAGE}
   redis:
-    image: redis:latest
+    image: ${DB_IMAGE}:${DB_TAG}
+
+
+#     version: '2'
+# services:
+#   web:
+#     image: smehta1712/sample-python-webapp
+#     ports:
+#      - "5000:5000"
+#     environment:
+#       - text="Hello World"
+#   redis:
+#     image: redis:latest
